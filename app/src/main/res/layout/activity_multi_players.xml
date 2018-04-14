@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_multi_players"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    tools:context="ntustee610.onvif_client_v2.ONVIF_Method.MultiPlayers">
+
+    <veg.mediaplayer.sdk.MediaPlayer
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/player1"
+        android:layout_weight="1">
+
+        <ProgressBar
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:id="@+id/player1loaderIndicator"
+            style="?android:attr/progressBarStyleSmall"/>
+
+    </veg.mediaplayer.sdk.MediaPlayer>
+
+    <veg.mediaplayer.sdk.MediaPlayer
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/player2"
+        android:layout_weight="1"
+        android:layout_marginTop="5dp">
+
+        <ProgressBar
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:id="@+id/player2loaderIndicator"
+            style="?android:attr/progressBarStyleSmall"/>
+
+    </veg.mediaplayer.sdk.MediaPlayer>
+
+    <veg.mediaplayer.sdk.MediaPlayer
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/player3"
+        android:layout_weight="1"
+        android:layout_marginTop="5dp">
+
+        <ProgressBar
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:id="@+id/player3loaderIndicator"
+            style="?android:attr/progressBarStyleSmall"/>
+
+    </veg.mediaplayer.sdk.MediaPlayer>
+
+</LinearLayout>

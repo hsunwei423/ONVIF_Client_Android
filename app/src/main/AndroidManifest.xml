@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="ntustee610.onvif_client_v2">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Design.Light"
+        tools:replace="android:icon, android:theme">
+        <activity android:name=".ONVIF_Method.ONVIF_GetDevice" />
+        <activity android:name=".ONVIF_Method.ONVIF_MAIN">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!--
+ ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+        -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity android:name=".ONVIF_Method.ONVIF_ParameterView" />
+        <activity android:name=".ONVIF_Method.RtspActivity" />
+        <activity
+            android:name=".ONVIF_Method.VXG_Player"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+        <activity android:name=".ONVIF_Method.GetVideoList" />
+        <activity
+            android:name=".ONVIF_Method.PlayVideoFromServer"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity android:name=".ONVIF_Method.MultiPlayers"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
+
+        </activity>
+    </application>
+
+</manifest>

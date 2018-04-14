@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_play_video_from_server"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ntustee610.onvif_client_v2.ONVIF_Method.PlayVideoFromServer">
+
+    <veg.mediaplayer.sdk.MediaPlayer
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/playerView2">
+
+        <ProgressBar
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:id="@+id/loaderIndicator2"
+            style="?android:attr/progressBarStyleSmall"/>
+
+
+
+
+
+    </veg.mediaplayer.sdk.MediaPlayer>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="bottom">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#757575">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textPanelPlayerControlPosition"
+                android:layout_marginLeft="2dp"
+                android:layout_alignParentLeft="true"
+                android:text="00:00:00"
+                android:textAppearance="?android:attr/textAppearanceSmall"/>
+            <SeekBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/seekPanelPlayerControlSeekbar"
+                android:layout_centerVertical="true"
+                android:clickable="false"
+                android:layout_toLeftOf="@+id/textPanelPlayerControlDuration"
+                android:layout_toRightOf="@+id/textPanelPlayerControlPosition" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textPanelPlayerControlDuration"
+                android:text="00:00:00"
+                android:layout_alignParentRight="true"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#757575"
+            android:gravity="center">
+
+            <Button
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/ic_play_circle_outline_white_36pt_3x"
+                android:id="@+id/BT_play_pause"
+                android:onClick="BT_play_pause"
+                android:layout_marginBottom="5dp"/>
+        </LinearLayout>
+
+
+
+
+
+
+    </LinearLayout>
+
+
+</FrameLayout>

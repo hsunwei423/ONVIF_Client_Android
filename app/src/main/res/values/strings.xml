@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">ONVIF_Client_v2</string>
+    <string name="title_activity_onvif__set_account">ONVIF_SetAccount</string>
+</resources>

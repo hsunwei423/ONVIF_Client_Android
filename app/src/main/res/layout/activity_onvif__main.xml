@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_onvif__main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="ntustee610.onvif_client_v2.ONVIF_Method.ONVIF_MAIN"
+    android:background="#F5F5F5"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TV_onvif"
+        android:id="@+id/searchLayout"
+        android:orientation="vertical"
+        android:background="#EEEEEE">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#EEEEEE"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/deviceLayout"
+                android:background="@drawable/border"
+                android:padding="5sp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Manufacturer "
+                    android:textSize="15dp"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="#78909C"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:id="@+id/TV_deviceTitle"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/TV_device"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:hint="ip camera"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:padding="5sp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="URI"
+                    android:textSize="15dp"
+                    android:id="@+id/TV_uriTitle"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/TV_uri"
+                    android:hint="device uri"
+                    android:textSize="15dp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:id="@+id/BT_search"
+            android:text="SEARCH DEVICE"
+            android:textSize="20dp"
+            android:onClick="intentSearch"
+            android:background="#FFB74D"
+            android:layout_marginTop="5dp"/>
+
+        <!--<Button-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="45dp"-->
+            <!--android:onClick="BT_setAccount"-->
+            <!--android:text="SET ACCOUNT"-->
+            <!--android:textSize="20dp"-->
+            <!--android:background="#FFB74D"-->
+            <!--android:layout_marginTop="5dp"/>-->
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/securityGroup"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/BT_ws_usernameToken"
+                android:text="WS-SECURITY"
+                android:textSize="13dp"
+                android:checked="true"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/BT_http_digest"
+                android:text="HTTP-DIGEST"
+                android:textSize="13dp"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/BT_Both"
+                android:text="BOTH"
+                android:textSize="13dp"/>
+
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border"
+        android:padding="2dp"
+        android:orientation="vertical"
+        android:layout_marginTop="5dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stream URI:"
+            android:textSize="15dp"
+            android:layout_marginLeft="5dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/TV_streamUri"
+            android:hint="show stream uri"
+            android:textSize="12dp"
+            android:layout_marginLeft="10dp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <!--<Button-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="45dp"-->
+        <!--android:id="@+id/BT_getStreamUri"-->
+        <!--android:textSize="20dp"-->
+        <!--android:text="GET STREAM URI"-->
+        <!--android:background="#FFB74D"-->
+        <!--android:layout_marginTop="5dp"-->
+        <!--android:onClick="BT_getStreamUri"/>-->
+
+    <com.dd.CircularProgressButton
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:id="@+id/BT_getStreamUri"
+        android:textColor="@color/cpb_white"
+        android:textSize="18sp"
+        app:cpb_textComplete="Complete"
+        app:cpb_textError="Error"
+        app:cpb_textIdle="GET STREAMURI" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:text="PLAY"
+        android:textSize="20dp"
+        android:background="#FFB74D"
+        android:layout_marginTop="5dp"
+        android:onClick="BT_play"/>
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:text="PARAMETERS"
+            android:textSize="20dp"
+            android:background="#FFB74D"
+            android:layout_marginTop="5dp"
+            android:onClick="BT_Parameters"
+            android:layout_weight="1"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:textSize="20dp"
+            android:text="reset"
+            android:background="#FFB74D"
+            android:layout_marginTop="5dp"
+            android:onClick="BT_reset"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"/>
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:text="Get Video Record"
+        android:textSize="20dp"
+        android:layout_marginTop="5dp"
+        android:background="#FFB74D"
+        android:onClick="BT_getVideo" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:text="MULTIVIEWS"
+        android:layout_marginTop="5dp"
+        android:background="#FFB74D"
+        android:textSize="20dp"
+        android:onClick="BT_multiViews"/>
+
+
+
+</LinearLayout>
