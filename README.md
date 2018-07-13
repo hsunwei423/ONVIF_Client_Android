@@ -4,4 +4,4 @@ Besides, I also use some projects such as VXG_Player to implement streaming func
 
 However, I know some code should be fixed. If you guys meet some problems, let me know and I'll solve it as soon as possible.
 
-P.S. This is my first time to use GitHub, so I need you guys' advice. Thanks! 
+
